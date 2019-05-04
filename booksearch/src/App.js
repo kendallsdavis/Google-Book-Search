@@ -1,8 +1,8 @@
 import React from "react";
-import Books from "./pages/books";
+import Search from "./pages/search";
 import Saved from "./pages/savedBooks";
 import Nav from './components/nav/nav';
-import Title from './components/header/header'
+import Header from './components/header/header'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 class App extends React.Component {
@@ -11,10 +11,10 @@ class App extends React.Component {
       <Router>
         <div>
           <Nav/>
-          <Title/>
+          <Header>Google Book Search</Header>
           <Switch>
-            <Route exact path="/" component={Books}></Route>
-            <Route exact path="/books" component={Books}></Route>
+            <Route exact path="/" component={Search}></Route>
+            <Route exact path="/search" component={Search}></Route>
             <Route exact path="/saved" component={Saved}></Route>
           </Switch>
         </div>

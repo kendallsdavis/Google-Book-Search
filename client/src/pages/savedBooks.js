@@ -52,7 +52,8 @@ class Saved extends React.Component {
                 deleteBook={this.deleteBook.bind(this)}
               />
             ))
-          }   
+          }  
+          <a className="navbar-brand saved" href="/">Return to Book Search</a> 
         </Results>
       </div>
     );

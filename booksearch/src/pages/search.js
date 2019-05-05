@@ -63,18 +63,6 @@ class Books extends Component {
 
   }
 
-  // saveBook = event => {
-  //   let book = {}
-  //   book.author = event.target.getAttribute('author')
-  //   book.title = event.target.getAttribute('title')
-  //   book.image = event.target.getAttribute('image')
-  //   book.description = event.target.getAttribute('description')
-  //   console.log(book)
-  //   API.saveBook(book)
-  //     .then(res => console.log(res))
-  //     .catch(err => console.log(err))
-  // }
-
 
   render() {
     return (

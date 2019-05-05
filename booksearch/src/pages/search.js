@@ -48,13 +48,15 @@ class Books extends Component {
         let matchedBook = this.state.books[i]
         console.log(matchedBook)
         let savedBook = {}
-        savedBook.author = matchedBook.volumeInfo.authors
+        savedBook.author = matchedBook.volumeInfo.authors[0]
         savedBook.title = matchedBook.volumeInfo.title
         savedBook.url = matchedBook.volumeInfo.infoLink
         savedBook.img = matchedBook.volumeInfo.imageLinks.smallThumbnail
         savedBook.description = matchedBook.searchInfo.textSnippet
         console.log(savedBook)
-        API.saveBook(savedBook);
+        API.saveBook(savedBook)
+        .then(res => console.log(res))
+        .catch(err => console.log(err))
         break;
       }
     }

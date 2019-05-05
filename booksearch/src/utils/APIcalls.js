@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // Set up the API key and search URL as constants 
-const API = "&AIzaSyCrflNWeNSyoEZ4-Lb7tasEYind3T2VZwg";
+const API = "AIzaSyCrflNWeNSyoEZ4-Lb7tasEYind3T2VZwg";
 const URL = "https://www.googleapis.com/books/v1/volumes?q=";
 
 
@@ -9,14 +9,13 @@ const URL = "https://www.googleapis.com/books/v1/volumes?q=";
 // and perform an axios.get function using the query input
 
 export default {
-    search: function(query) {
-        // break query into individual strings joined by a + to fit API query format
-        let params=(query).split(" ").join("+");
-        // URL + query + API key
-        return axios.get(URL + params + API)
+    search: function(bookInfo) {
+        const { title, author } = bookInfo;
+        const URL = `https://www.googleapis.com/books/v1/volumes?q=intitle=${title}&inauthor=${author}&key=${API}`;
+        return axios.get(URL)
     },
     // Returns all books
-    allBooks: function() {
+    getBooks: function() {
         return axios.get("/api/books");
     },
     // Searches for a book with a specirif ID

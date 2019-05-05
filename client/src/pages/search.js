@@ -76,6 +76,7 @@ class Books extends Component {
               <Input onChange={ (e) => this.updateInputs(e)} name="title" placeholder="Title (required)" />
               <Input onChange={ (e) => this.updateInputs(e)} name="author" placeholder="Author (required)" />
               <FormBtn onClick={ (e) => this.loadBooks(e)} >Submit Book</FormBtn>
+              <a className="navbar-brand saved" href="/saved">Saved Books</a>
             </form>
           </Col>
           <Col size="md-6 sm-12">

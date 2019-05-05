@@ -1,4 +1,4 @@
-.view {
+/* .view {
     color: white;
     text-decoration: none;
   }
@@ -16,15 +16,19 @@
   .view :visited {
     color: white;
     text-decoration: none;
-  }
+  } */
   
-  .bookitem {
+  /* .bookitem {
     border: solid black 1px;
     margin-top: 5px;
     border: solid 1px rgb(196, 196, 196);
     box-shadow: 3px 2px 2px black;
     border-radius: 5px;
     margin-bottom: 5px;
+  } */
+
+  .containerbook {
+    margin-bottom: 15px;
   }
   
   .bookinfo {
@@ -36,28 +40,31 @@
     line-height: 15px;
     position: relative;
     top: 10px;
+    margin-bottom: 15px;
+  
   }
   
-  .bookbtns button {
+  .buttons button {
     float: right;
     position: relative;
     top: 10px;
     left: 20px;
     margin-right: 10px;
+    margin-top: 10px;
   }
   
-  .bookbottom {
+  /* .bookbottom {
     height: auto;
     overflow: auto;
     margin-bottom: 10px;
-  }
+  } */
   
   .bookimg {
     float: left;
     margin-right: 15px;
   }
   
-  .bookbottom {
+  /* .bookbottom {
     text-indent: 15px;
     word-wrap: break-word;
-  }
+  } */

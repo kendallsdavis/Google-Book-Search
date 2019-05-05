@@ -28,9 +28,7 @@ class Saved extends React.Component {
   }
 
   deleteBook = event => {
-    console.log(event.target)
     let id = event.target.getAttribute('id')
-    console.log(id)
     API.deleteBook(id)
       .then(res => this.loadBooks())
       .catch(err => console.log(err));
@@ -43,11 +41,11 @@ class Saved extends React.Component {
         {this.state.savedBooks.length === 0 ? <h1 style={styles.alignment}>Search for a Book!</h1> : 
             this.state.savedBooks.map((book,i) => (
               <RenderBooks
-                key={i}
+                key={book._id}
                 id={book._id}
-                saveOrDelete={"delete"}
+                option={"delete"}
                 author={book.author}
-                link={book.link}
+                url={book.link}
                 title={book.title}
                 image={book.image}
                 description={book.description}

@@ -1,16 +1,16 @@
 import React from 'react'
 import './Render.css'
 
-function RenderNewBook(props) {
+function Renderbooks(props) {
   return (
-    <div className="container bookitem">
-      <div className="row booktop">
-        <div className="col-9 bookinfo">
+    <div className="containerbook">
+      <div className="row header">
+        <div className="col-9 info">
           <h5><strong>{props.title}</strong></h5>
-          <p>Written by: {props.author}</p>
+          <p>{props.author}</p>
         </div>
-        <div className="col-3 bookbtns">
-          {props.saveOrDelete === "save" ? 
+        <div className="col-3 buttons">
+          {props.option === "save" ? 
             <button 
               className="btn btn-success"
               author={props.author}
@@ -21,22 +21,22 @@ function RenderNewBook(props) {
               >Save
             </button> 
           : ""}
-          {props.saveOrDelete === "delete" ? 
+          {props.option === "delete" ? 
             <button 
-              className="btn btn-danger"
+              className="btn btn-warning"
               id={props.id}
               onClick={props.deleteBook}
               >Delete
             </button>
           : ""}
-          <a href={props.link} className="view"><button className="btn btn-primary">View</button></a>
+          <a href={props.url} className="view"><button className="btn btn-success">View</button></a>
         </div>
       </div>
       <hr/>
       <div className="row">
-        <div className="col-12 bookbottom">
-          <img className="bookimg" alt={props.title} src={props.image}></img>
-          <p className="booksummary">{props.description}</p>
+        <div className="col-12 foot">
+          {/* <img className="image" alt={props.title} src={props.image}></img> */}
+          <p className="description">{props.description}</p>
         </div>
       </div>
     </div>
@@ -44,4 +44,4 @@ function RenderNewBook(props) {
 }
 
 
-export default RenderNewBook
+export default Renderbooks

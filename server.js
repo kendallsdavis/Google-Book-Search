@@ -15,7 +15,7 @@ if (process.env.NODE_ENV === "production") {
 
 // Define API routes here
 app.use(routes)
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/booksearch")
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooklist")
 // Send every other request to the React app
 // Define any API routes before this runs
 app.get("*", (req, res) => {

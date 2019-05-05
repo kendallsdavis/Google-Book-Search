@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Set up the API key and search URL as constants 
 const API = "AIzaSyCrflNWeNSyoEZ4-Lb7tasEYind3T2VZwg";
-const URL = "https://www.googleapis.com/books/v1/volumes?q=";
+// const URL = "https://www.googleapis.com/books/v1/volumes?q=";
 
 
 // create function to take in a query, manipulate it into the format accepted by the API query, 

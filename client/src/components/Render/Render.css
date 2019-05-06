@@ -1,31 +1,4 @@
-/* .view {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .view :link {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .view :hover {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .view :visited {
-    color: white;
-    text-decoration: none;
-  } */
-  
-  /* .bookitem {
-    border: solid black 1px;
-    margin-top: 5px;
-    border: solid 1px rgb(196, 196, 196);
-    box-shadow: 3px 2px 2px black;
-    border-radius: 5px;
-    margin-bottom: 5px;
-  } */
+
 
   .containerbook {
     margin-bottom: 15px;
@@ -53,18 +26,8 @@
     margin-top: 10px;
   }
   
-  /* .bookbottom {
-    height: auto;
-    overflow: auto;
-    margin-bottom: 10px;
-  } */
-  
   .bookimg {
     float: left;
     margin-right: 15px;
   }
   
-  /* .bookbottom {
-    text-indent: 15px;
-    word-wrap: break-word;
-  } */

@@ -29,7 +29,6 @@ function Renderbooks(props) {
               >Delete
             </button>
           : ""}
-          <a href={props.url} className="view"><button className="btn btn-success">View</button></a>
         </div>
       </div>
       <hr/>

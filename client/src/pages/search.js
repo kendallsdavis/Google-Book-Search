@@ -31,13 +31,11 @@ class Books extends Component {
     console.log('title: ', title);
     console.log('author: ', author);
     API.search({title, author})
-      .then(res => {console.log(res)
+      .then(res => {
         this.setState({ 
-        books: res.data.items
-      })
-      console.log(this.state.books)
-    })
-    .catch(err => console.log(err));
+          books: this.filterBooks(res.data.items)
+        }, console.log(this.state.books));
+    }).catch(err => console.log(err));
   };
 
   saveBook(id) {
@@ -49,7 +47,7 @@ class Books extends Component {
         console.log(matchedBook)
         let savedBook = {}
         savedBook.author = matchedBook.volumeInfo.authors[0]
-        savedBook.title = matchedBook.volumeInfo.title
+        savedBook.title = matchedBook.volumeInfo.
         savedBook.url = matchedBook.volumeInfo.infoLink
         savedBook.img = matchedBook.volumeInfo.imageLinks.smallThumbnail
         savedBook.description = matchedBook.searchInfo.textSnippet
@@ -61,6 +59,19 @@ class Books extends Component {
       }
     }
 
+  }
+
+  filterBooks(booksArr) {
+    return booksArr.filter( book => {
+      return book.volumeInfo.imageLinks && 
+        book.volumeInfo.imageLinks.smallThumbnail &&
+        book.id &&
+        book.volumeInfo.title &&
+        book.volumeInfo.infoLink &&
+        book.volumeInfo.authors &&
+        book.searchInfo &&
+        book.searchInfo.textSnippet
+    });
   }
 
 
@@ -93,7 +104,7 @@ class Books extends Component {
                         {book.volumeInfo.title} by {book.volumeInfo.authors[0]}
                       </strong> 
                     </a>
-                    {book.searchInfo.textSnippet}
+                    {book.searchInfo && book.searchInfo.textSnippet}
                     <button onClick={() => this.saveBook(book.id)}>Save</button>
                   </ListItem>
                 ))}
